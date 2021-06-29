@@ -23,11 +23,11 @@ The tool would be used by Rift Entertainment asbl. a Luxembourg based non-profit
 
 ## Documentation
 
-This tool will make use of various APIs with the goal of improving the production quality of our League of Legends related treams.
-It will go through an undefined number of steps, with each step already improving the production.
-We will develop the product step by step and try to only move on to the next step once the current one is done.
-Steps may be added or removed along the way, or multiple steps may be fused into one and vice versa.
-For each step the way they will be executed will be described more or less precisely, the description evolving alongside development
+This tool will make use of various APIs with the goal of improving the production quality of our League of Legends related treams.  
+It will go through an undefined number of steps, with each step already improving the production.  
+We will develop the product step by step and try to only move on to the next step once the current one is done.  
+Steps may be added or removed along the way, or multiple steps may be fused into one and vice versa.  
+For each step the way they will be executed will be described more or less precisely, the description evolving alongside development.  
 
 ### Steps
 
