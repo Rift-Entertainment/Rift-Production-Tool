@@ -1,5 +1,10 @@
 # Rift-Production-Tool
 
+## Dependencies
+To run this program you need Python 3.
+Yo also need the "requests" library, installable using:
+    python -m pip install requests
+
 ## Riot.txt
 
 Create a file "riot.txt", which contains a code letting riot find the project
