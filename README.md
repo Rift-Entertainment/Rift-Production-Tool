@@ -1,7 +1,7 @@
 # Rift-Production-Tool
 
 ## Dependencies
-To run this program you need Python 3.
+To run this program you need Python 3 .
 Yo also need the "requests" library, installable using:
     python -m pip install requests
 
