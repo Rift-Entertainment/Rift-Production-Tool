@@ -34,8 +34,13 @@ For each step the way they will be executed will be described more or less preci
 #### Step 1 - Live Pick&Ban Capture
 
   * Composants
-    - Web interface, which hosts the desired interface to be shown on stream
+    - Web server, which hosts the desired interface to be shown on stream
     - PC in the lobby as spectator, which will run the program
+
+  * Functional expectations
+    - The webserver needs to know on which patch the game is running
+    - The webserver will simply get ids from the client, through a hashtable (dict) it will grab the corresponding link to the image associated to the id
+    - The webserver grabs images from cdragon, the link used to do so is a constant fromated using the current patch (https://raw.communitydragon.org/{patch_ver}/game/assets/characters/bard/skins/base/aatroxloadscreen.png)
     
   * Program:
     - Using the LCU, the program detects entering a lobby, the web interface is reset.
