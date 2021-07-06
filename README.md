@@ -52,6 +52,11 @@ For each step the way they will be executed will be described more or less preci
         -- WIP: Web interface contains "slots" for each varying image, an update consists of a dict containing: {slot:image_id}
     - Once the champ select is over, the program may stop running
 
+##### Design
+    * Two possibilities of communicating between Game PC and webpage:
+        - Use a NAS between Game PC and weberver, containing a (json?) file containing all necessary links and other information for the webpage (animations for example) 
+        - Or: Use sockets to communicate between the 2 processes
+
 #### Step 2 - (No tournament API) Stat tracking
    
   * To track player and team stats throughout a tournament
