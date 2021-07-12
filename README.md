@@ -34,21 +34,28 @@ For each step the way they will be executed will be described more or less preci
 #### Step 1 - Live Pick&Ban Capture
 
   * Composants
-    - Web server, which hosts the desired interface to be shown on stream
-    - PC in the lobby as spectator, which will run the program
+    - "Game PC", PC in the lobby as spectator, which will run the program
+    - "Stream PC", PC on which vmix is running, take website as browser source
+    - A webserver after all (?)
 
   * Functional expectations
-    - The webserver needs to know on which patch the game is running (https://ddragon.leagueoflegends.com/api/versions.json - first line)
-    - The webserver will simply get ids from the client, through a hashtable (dict) it will grab the corresponding link to the image associated to the id
-    - The webserver grabs images from cdragon, the link used to do so is a constant fromated using the current patch (https://raw.communitydragon.org/{patch_ver}/game/assets/characters/bard/skins/base/aatroxloadscreen.png)
-    
+    - The program needs access to the current "champions.json"
+    - The program uses the champion's ids to get their alias
+    - The interface is coded in HTML and on a local website
+    - The program sends id or a link to the image to insert to the website, along where and the champ select's status
+
   * Program:
-    - Using the LCU, the program detects entering a lobby, the web interface is reset.
+    - Using the LCU, the program detects entering a lobby, the interface is reset.
     - Once champ selection has started, player names are updated in the interface (before Tournament API, team logos will have to be put in through vmix)
-    - Every 2 (may be changed) the program updates the client's status, if an update happened (summoner spell, pick/ban, swap (,perk change)), the necessary id is sent to the webserver.
+    - Every 2 (may be changed) the program updates the client's status, if an update happened ((summoner) spell, pick/ban, swap (,perk change)), the necessary id is sent to the interface.
         -- In function of the id, the adequte image is updated/set.
-        -- WIP: Web interface contains "slots" for each varying image, anupdate consists of a dict containing: {slot:image_id}
+        -- WIP: Web interface contains "slots" for each varying image, an update consists of a dict containing: {slot:image_id}
     - Once the champ select is over, the program may stop running
+
+##### Design
+    * Two possibilities of communicating between Game PC and webpage:
+        - Use a NAS between Game PC and weberver, containing a (json?) file containing all necessary links and other information for the webpage (animations for example) 
+        - Or: Use sockets to communicate between the 2 processes
 
 #### Step 2 - (No tournament API) Stat tracking
    
