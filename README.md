@@ -35,27 +35,24 @@ For each step the way they will be executed will be described more or less preci
 
   * Composants
     - "Game PC", PC in the lobby as spectator, which will run the program
-    - "Stream PC", PC on which vmix is running, take website as browser source
-    - A webserver after all (?)
+    - "Stream PC", PC on which vmix is running, taking the webpage as browser source
+    - A webserver hosting the webpage and containing its assets
 
   * Functional expectations
     - The program needs access to the current "champions.json"
-    - The program uses the champion's ids to get their alias
+    - The program uses the champions' ids to get their alias
     - The interface is coded in HTML and on a local website
-    - The program sends id or a link to the image to insert to the website, along where and the champ select's status
+    - The program sends a link (determined in the python script using the champion id) to the image to insert on the website, to the json file and the champ select's status
 
   * Program:
     - Using the LCU, the program detects entering a lobby, the interface is reset.
     - Once champ selection has started, player names are updated in the interface (before Tournament API, team logos will have to be put in through vmix)
-    - Every 2 (may be changed) the program updates the client's status, if an update happened ((summoner) spell, pick/ban, swap (,perk change)), the necessary id is sent to the interface.
-        -- In function of the id, the adequte image is updated/set.
-        -- WIP: Web interface contains "slots" for each varying image, an update consists of a dict containing: {slot:image_id}
+    - Every 0.5 seconds the program updates the client's status, if an update happened ((summoner) spell, pick/ban, swap (,perk change)), the necessary link is updated in the json. Also, the timer is updated every 0.5 second.
     - Once the champ select is over, the program may stop running
 
 ##### Design
-    * Two possibilities of communicating between Game PC and webpage:
-        - Use a NAS between Game PC and weberver, containing a (json?) file containing all necessary links and other information for the webpage (animations for example) 
-        - Or: Use sockets to communicate between the 2 processes
+    * The webpage being hosted on a webserver, the same webserver will contain the json file and some local images.
+        --> Find how we will modify the json file using a python script
 
 #### Step 2 - (No tournament API) Stat tracking
    
