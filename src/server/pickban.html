@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--Create a button-->
+<div id="demo">
+<h1>The Test</h1>
+<button type="button" onclick="stopq()">Change Content</button>
+</div>
+
+<style>
+#demo{
+  display: inline;
+}
+#mom{
+  width: 1920px;
+  height: 1080px;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  position: absolute;
+  /*transform: translate(10%, 150%);*/
+  grid-gap: 5px;
+  /*background-color: #2196F3;
+  border: 3px solid #73AD21;*/
+  grid-template-columns: 713px 138.6px 713px ;
+  grid-template-rows: 252px 80px;
+}
+
+.center{
+  text-align: center;
+  background-color: rgba(255, 155, 155, 0.8);
+  grid-column: 2;
+  grid-row: 1;
+  background-color: #A9A9A9 ;
+}
+
+.picks{
+  width: 138.6px; /*138.6px is 45% of the original size (308px)*/
+}
+
+.bans{
+  width: 54px; /*54px is 45% of the original size (120px)*/
+}
+
+.logo{
+  width:  138.6px;
+}
+
+.picks-div{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 138.6px 138.6px 138.6px 138.6px 138.6px;
+}
+
+#Blue-Pick-1{grid-column: 1;}
+#Blue-Pick-2{grid-column: 2;}
+#Blue-Pick-3{grid-column: 3;}
+#Blue-Pick-4{grid-column: 4;}
+#Blue-Pick-5{grid-column: 5;}
+
+#Red-Pick-1{grid-column: 1;}
+#Red-Pick-2{grid-column: 2;}
+#Red-Pick-3{grid-column: 3;}
+#Red-Pick-4{grid-column: 4;}
+#Red-Pick-5{grid-column: 5;}
+
+.bans-div-p1{
+  display: inline;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.bans-div-p2{
+  display: inline;
+}
+
+.bans-blue{
+  grid-column: 1;
+  grid-row: 2;
+  text-align: right;
+}
+.bans-red{
+  grid-column: 3;
+  grid-row: 2;
+}
+
+</style>
+
+<!--Create image-->
+<div id="mom">
+  <div id="container">
+    <div id="blue-picks-div" class="picks-div">
+      <img class="picks blue" id="Blue-Pick-1" alt="Blue Pick 1" src="assets/banner-top.png?3">
+      <img class="picks blue" id="Blue-Pick-2" alt="Blue Pick 2" src="assets/banner-jgl.png?3">
+      <img class="picks blue" id="Blue-Pick-3" alt="Blue Pick 3" src="assets/banner-middle.png?3">
+      <img class="picks blue" id="Blue-Pick-4" alt="Blue Pick 4" src="assets/banner-bottom.png?3">
+      <img class="picks blue" id="Blue-Pick-5" alt="Blue Pick 5" src="assets/banner-sup.png?3">
+    </div>
+    <div class="bans-blue">
+      <div id="blue-bans-div-p2" class="bans-div-p2">
+        <img class="bans blue" id="Blue-Ban-4" alt="Blue Ban 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+        <img class="bans blue" id="Blue-Ban-5" alt="Blue Ban 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+      </div>
+      <div id="blue-bans-div-p1" class="bans-div-p1">
+        <img class="bans blue" id="Blue-Ban-1" alt="Blue Ban 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+        <img class="bans blue" id="Blue-Ban-2" alt="Blue Ban 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+        <img class="bans blue" id="Blue-Ban-3" alt="Blue Ban 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+      </div>
+    </div>
+
+    <div class="center">
+      <img class="logo" id="logo" alt="Logo" src="assets/Main_social.png">
+    </div>
+
+    <div id="red-picks-div" class="picks-div">
+      <img class="picks red" id="Red-Pick-1" alt="Red Pick 1" src="assets/banner-top.png?3">
+      <img class="picks red" id="Red-Pick-2" alt="Red Pick 2" src="assets/banner-jgl.png?3">
+      <img class="picks red" id="Red-Pick-3" alt="Red Pick 3" src="assets/banner-middle.png?3">
+      <img class="picks red" id="Red-Pick-4" alt="Red Pick 4" src="assets/banner-bottom.png?3">
+      <img class="picks red" id="Red-Pick-5" alt="Red Pick 5" src="assets/banner-sup.png?3">
+    </div>
+    <div class="bans-red">
+      <div id="red-bans-div-p1" class="bans-div-p1">
+        <img class="bans red" id="Red-Ban-1" alt="Red Ban 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png" alt="champ_icon">
+        <img class="bans red" id="Red-Ban-2" alt="Red Ban 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png" alt="champ_icon">
+        <img class="bans red" id="Red-Ban-3" alt="Red Ban 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png" alt="champ_icon">
+      </div>
+      <div id="red-bans-div-p2" class="bans-div-p2">
+        <img class="bans red" id="Red-Ban-4" alt="Red Ban 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png" alt="champ_icon">
+        <img class="bans red" id="Red-Ban-5" alt="Red Ban 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png" alt="champ_icon">
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+var end = 0;
+var interval = setInterval(start, 500);
+var last_timestamp = 0;
+async function start(){
+  var now = "?".concat(Date.now())
+  var jsonFile = await fetch('links.json'.concat(now)).then(res => res.json());
+
+  var new_timestamp = jsonFile.timestamp
+
+  if (last_timestamp == new_timestamp){
+    return 0;
+  }
+  
+  last_timestamp = new_timestamp;
+  document.getElementById("Blue-Pick-1").src=jsonFile.links.blue.picks["1"];
+  document.getElementById("Blue-Pick-2").src=jsonFile.links.blue.picks["2"];
+  document.getElementById("Blue-Pick-3").src=jsonFile.links.blue.picks["3"];
+  document.getElementById("Blue-Pick-4").src=jsonFile.links.blue.picks["4"];
+  document.getElementById("Blue-Pick-5").src=jsonFile.links.blue.picks["5"];
+  document.getElementById("Blue-Ban-1").src=jsonFile.links.blue.bans["1"];
+  document.getElementById("Blue-Ban-2").src=jsonFile.links.blue.bans["2"];
+  document.getElementById("Blue-Ban-3").src=jsonFile.links.blue.bans["3"];
+  document.getElementById("Blue-Ban-4").src=jsonFile.links.blue.bans["4"];
+  document.getElementById("Blue-Ban-5").src=jsonFile.links.blue.bans["5"];
+
+  document.getElementById("Red-Pick-1").src=jsonFile.links.red.picks["1"];
+  document.getElementById("Red-Pick-2").src=jsonFile.links.red.picks["2"];
+  document.getElementById("Red-Pick-3").src=jsonFile.links.red.picks["3"];
+  document.getElementById("Red-Pick-4").src=jsonFile.links.red.picks["4"];
+  document.getElementById("Red-Pick-5").src=jsonFile.links.red.picks["5"];
+  document.getElementById("Red-Ban-1").src=jsonFile.links.red.bans["1"];
+  document.getElementById("Red-Ban-2").src=jsonFile.links.red.bans["2"];
+  document.getElementById("Red-Ban-3").src=jsonFile.links.red.bans["3"];
+  document.getElementById("Red-Ban-4").src=jsonFile.links.red.bans["4"];
+  document.getElementById("Red-Ban-5").src=jsonFile.links.red.bans["5"];
+}
+
+function stopq(){
+  clearInterval(interval);
+}
+
+</script>
+
+</body>
+</html> 
