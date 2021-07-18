@@ -1,7 +1,9 @@
 import requests, json
+from paramiko import *
 
+"""
+Deprecated, but kept for now as reference
 # Send signal to clean web interfae
-
 base_url = "https://euw1.api.riotgames.com"
 reg_url = "https://europe.api.riotgames.com"
 # Personal key here for testing purposes
@@ -31,7 +33,7 @@ if r_status_code == 200:
     print(c_game)
     print(c_game["gameStartTime"])
     print(c_game["gameLength"])
-
+"""
 # Send Signal that Champ Select was started + Summoner names
 
 # During Champ Select:
@@ -49,3 +51,74 @@ States:
 4   - {Blue/Red} hovering champ {0/1/2/3/4} - {Blue/Red} team's player {0/1/2/3/4} is currently hovering a champion, position slot {0/1/2/3/4} is replaced with champion_banner. Summoner name is still highlighted in team's colour and slot still blinks.
 5   - {Blue/Red} locks pick {0/1/2/3/4} - {Blue/Red} team's player {0/1/2/3/4} just locked a pick, position slot {0/1/2/3/4} is replaced with champion_banner, Summoner name returns to normal, and slot stops blinking
 """
+
+# Base banners links for reset
+base_top_banner = "assets/banner-top.png"
+base_jgl_banner = "assets/banner-jgl.png"
+base_middle_banner = "assets/banner-middle.png"
+base_bottom_banner = "assets/banner-bottom.png"
+base_sup_banner = "assets/banner-sup.png"
+
+# Bases of the links for banners and icons
+banner_link = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/"
+bl_core = "/skins/base/"
+bl_tail = "loadscreen.jpg"
+
+icon_link = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/"
+il_tail = ".png"
+
+# SSH connection data
+host = ""
+port = 22
+username = "admin"
+password = input()
+
+# Creation of transport to create an SFTP connection
+transport = Transport((host, port))
+transport.connect(username=username, password=password)
+sftp = SFTPClient.from_transport(transport)
+
+# Loading json data of file
+sftp.chdir("")
+myfile = sftp.open("links.json")
+json_obj = json.load(myfile)
+myfile.close()
+print("file closed")
+
+# Setting up for while loop
+go = True
+start = time.time() # Temporarily used to limit loop in time
+
+while go:
+	start_time = time.time() # Used to measure time passed during actions
+
+	# Temporary way of setting right data in json file, will change once access to LCU is granted
+	side = "blue"
+	phase = "picks"
+	pos = "1"
+	champion_name = "ahri"
+	timestamp = int(time.time()*100)
+
+	# Modifying json data
+	json_obj["timestamp"] = timestamp
+	json_obj["links"][side][phase][pos] = banner_link+champion_name+bl_core+champion_name+bl_tail
+
+	# Updating json file
+	myfile = sftp.open("links.json", "w")
+	json.dump(json_obj, myfile)
+	myfile.close()
+
+	# Checking time
+	duration = time.time() - start_time
+	difference = 0.5-duration
+	if difference > 0:
+		time.sleep(difference)
+	if time.time() - start >= 5:
+		go = False
+
+
+# Closing the SSH conncections
+sftp.close()
+print("sftp closed")
+transport.close()
+print("transport closed")
