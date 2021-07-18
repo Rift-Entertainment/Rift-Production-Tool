@@ -3,7 +3,7 @@
 ## Dependencies
 To run this program you need Python 3.  
 You also need the "requests" as well as the "paramiko" library, installable using:  
-    `python -m pip install requests`
+    `python -m pip install requests` <br />
     `python -m pip install paramiko`
 
 ## Riot.txt
