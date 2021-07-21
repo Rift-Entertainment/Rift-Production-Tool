@@ -1,0 +1,109 @@
+:root{
+  --banner-width: 173px;
+  --asset-perc: calc(var(--banner-width)/308);
+  --banner-height: calc(560*var(--asset-perc));
+  --ban-size: calc(120*var(--asset-perc));
+  --name-plate-height: calc(0.2*var(--banner-height));
+  --base-padding: 5px;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  position: absolute;
+  /*transform: translate(10%, 150%);*/
+  grid-gap: 1px;
+  /*background-color: #2196F3;
+  border: 3px solid #73AD21;*/
+  grid-template-columns: calc(5*var(--banner-width))px var(--banner-width) calc(5*var(--banner-width))px ;
+  grid-template-rows: var(--banner-height) var(--ban-size);
+}
+
+.center{
+  text-align: center;
+  background-color: rgba(255, 155, 155, 0.8);
+  grid-column: 2;
+  grid-row: 1;
+  background-color: #A9A9A9 ;
+}
+
+/*Original size for champion banners:  308x560*/
+.picks{
+  width: var(--banner-width); 
+}
+/*Original size for champion icons:  120x120*/
+.bans{
+  width: var(--ban-size); 
+}
+
+.logo{
+  width:  var(--banner-width);
+}
+
+.picks-div{
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: var(--banner-width) var(--banner-width) var(--banner-width) var(--banner-width) var(--banner-width);
+}
+
+#Blue-Sup-SN{grid-column: 1;}
+#Blue-Pick-Sup{grid-column: 1;}
+#Blue-Bot-SN{grid-column: 2;}
+#Blue-Pick-Bot{grid-column: 2;}
+#Blue-Mid-SN{grid-column: 3;}
+#Blue-Pick-Mid{grid-column: 3;}
+#Blue-Jgl-SN{grid-column: 4;}
+#Blue-Pick-Jgl{grid-column: 4;}
+#Blue-Top-SN{grid-column: 5;}
+#Blue-Pick-Top{grid-column: 5;}
+
+
+#Red-Pick-Top{grid-column: 1;}
+#Red-Top-SN{grid-column: 1;}
+#Red-Pick-Jgl{grid-column: 2;}
+#Red-Jgl-SN{grid-column: 2;}
+#Red-Pick-Mid{grid-column: 3;}
+#Red-Mid-SN{grid-column: 3;}
+#Red-Pick-Bot{grid-column: 4;}
+#Red-Bot-SN{grid-column: 4;}
+#Red-Pick-Sup{grid-column: 5;}
+#Red-Sup-SN{grid-column: 5;}
+
+.bans-div-p1{
+  display: inline;
+}
+
+.bans-div-p2{
+  display: inline;
+  padding-right: calc(0.5*var(--ban-size));
+  padding-left: calc(0.5*var(--ban-size));
+}
+
+.bans-blue{
+  grid-column: 1;
+  grid-row: 2;
+  text-align: right;
+}
+.bans-red{
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.nameplate{
+  position: absolute;
+  display: inline;
+  color: green;
+  background-color: gray;
+  top: calc(var(--banner-height) - var(--name-plate-height));
+  height: var(--name-plate-height);
+  width: var(--banner-width);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  line-height: var(--name-plate-height);
+}
+
+span{
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+}
