@@ -3,46 +3,82 @@
   --asset-perc: calc(var(--banner-width)/308);
   --banner-height: calc(560*var(--asset-perc));
   --ban-size: calc(120*var(--asset-perc));
-  --name-plate-height: calc(0.2*var(--banner-height));
+  --name-plate-height: var(--ban-size);
   --base-padding: 5px;
+  --base-color: #02052b;
 }
 
 #container{
   display: grid;
-  grid-template-columns: auto auto auto;
   position: absolute;
-  /*transform: translate(10%, 150%);*/
-  grid-gap: 1px;
-  /*background-color: #2196F3;
-  border: 3px solid #73AD21;*/
+
   grid-template-columns: calc(5*var(--banner-width))px var(--banner-width) calc(5*var(--banner-width))px ;
   grid-template-rows: var(--banner-height) var(--ban-size);
 }
 
 .center{
-  text-align: center;
-  background-color: rgba(255, 155, 155, 0.8);
   grid-column: 2;
   grid-row: 1;
-  background-color: #A9A9A9 ;
+
+  width:  var(--banner-width);
+  background-color: var(--base-color);
+  display: grid;
+
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: calc(var(--banner-height) - 2*var(--ban-size)) var(--ban-size) var(--ban-size);
+}
+
+.logo{
+  grid-row: 1;
+
+  position: relative;
+  width: calc(0.66*var(--banner-width));
+  text-align: center;
+}
+
+.timer-box{
+  grid-row: 2;
+
+  width: var(--banner-width);
+  height: var(--ban-size);
+  background-color: white ;
+  display: grid;
+  grid-template-rows: calc(0.33*var(--ban-size)) calc(0.66*var(--ban-size));
+
+  text-align: center;
+  align-items: center;
+  line-height: var(--name-plate-height);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.phase{
+  grid-row: 1;
+
+  font-size: 15px;
+}
+
+.picks-cont{
+  width: var(--banner-width);
+  height: var(--banner-height);
+  background-color: var(--base-color);
 }
 
 /*Original size for champion banners:  308x560*/
 .picks{
-  width: var(--banner-width); 
+  width: var(--banner-width);
 }
 /*Original size for champion icons:  120x120*/
 .bans{
   width: var(--ban-size); 
 }
 
-.logo{
-  width:  var(--banner-width);
-}
-
 .picks-div{
   display: grid;
   grid-gap: 1px;
+  background-color: white;
   grid-template-columns: var(--banner-width) var(--banner-width) var(--banner-width) var(--banner-width) var(--banner-width);
 }
 
@@ -82,6 +118,7 @@
 .bans-blue{
   grid-column: 1;
   grid-row: 2;
+
   text-align: right;
 }
 .bans-red{
@@ -90,16 +127,19 @@
 }
 
 .nameplate{
+  text-transform: uppercase;
+  box-sizing: border-box;
   position: absolute;
   display: inline;
-  color: green;
-  background-color: gray;
+  color: white;
+  background-color: var(--base-color);
   top: calc(var(--banner-height) - var(--name-plate-height));
   height: var(--name-plate-height);
   width: var(--banner-width);
   font-family: Arial, sans-serif;
   text-align: center;
   line-height: var(--name-plate-height);
+  font-weight: bold;
 }
 
 span{

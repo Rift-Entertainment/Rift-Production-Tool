@@ -1,38 +1,50 @@
 {
-  "timestamp": 21,
-  "timer": 30,
+  "timestamp": 112,
+  "timer": 28,
   "links": {
     "blue": {
       "picks": {
-        "1": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/base/ahriloadscreen.jpg",
-        "2": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/braum/skins/base/braumloadscreen.jpg",
-        "3": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ezreal/skins/base/ezrealloadscreen.jpg",
-        "4": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akali/skins/base/akaliloadscreen.jpg",
-        "5": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hecarim/skins/base/hecarimloadscreen.jpg"
+        "sup": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/base/brandloadscreen.jpg",
+        "bot": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/braum/skins/base/braumloadscreen.jpg",
+        "mid": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ezreal/skins/base/ezrealloadscreen.jpg",
+        "jgl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akali/skins/base/akaliloadscreen.jpg",
+        "top": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hecarim/skins/base/hecarimloadscreen.jpg"
       },
       "bans": {
-        "1": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
-        "2": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/69.png",
-        "3": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/1.png",
-        "4": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/44.png",
-        "5": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/154.png"
+        "sup": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
+        "bot": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/69.png",
+        "mid": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/1.png",
+        "jgl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/44.png",
+        "top": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/154.png"
       }
     },
     "red": {
       "picks": {
-        "1": "assets/banner-top.png?3",
-        "2": "assets/banner-jgl.png?3",
-        "3": "assets/banner-middle.png?1",
-        "4": "assets/banner-bottom.png?3",
-        "5": "assets/banner-sup.png?3"
+        "top": "assets/banner-top.png?2",
+        "jgl": "assets/banner-jgl.png?2",
+        "mid": "assets/banner-mid.png?2",
+        "bot": "assets/banner-bot.png?2",
+        "sup": "assets/banner-sup.png?2"
       },
       "bans": {
-        "1": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
-        "2": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
-        "3": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
-        "4": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
-        "5": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png"
+        "top": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
+        "jgl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
+        "mid": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
+        "bot": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
+        "sup": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png"
       }
     }
+  },
+  "sumNames": {
+    "Blue-Sup-SN":"DabbaTechnician",
+    "Blue-Bot-SN":"DabbaKappa",
+    "Blue-Mid-SN":"DabbaMode",
+    "Blue-Jgl-SN":"DabbaWawa",
+    "Blue-Top-SN":"DabbaLu",
+    "Red-Top-SN":"Soazzza",
+    "Red-Jgl-SN":"Jungle-guy yeah",
+    "Red-Mid-SN":"Faker 8-)",
+    "Red-Bot-SN":"Doublelift",
+    "Red-Sup-SN":"YellowStar"
   }
 }

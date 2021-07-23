@@ -10,85 +10,84 @@
 <button type="button" onclick="resize_to_fit(blSupSn.firstChild)">Update name</button>
 </div>
 
-<link href="StyleSheet_BaseInterface.css" rel="stylesheet">
+<link href="StyleSheet_BaseInterface.css?122" rel="stylesheet">
 
 <!--Create image-->
 <div id="container">
   <div id="blue-picks-div" class="picks-div">
     <!--From left to right-->
-    <grid-item><div class="nameplate" id="Blue-Sup-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
-      <img class="picks blue" id="Blue-Pick-Sup" alt="Blue Pick 1" src="assets/banner-sup.png?3"></grid-item>
-    <grid-item><div class="nameplate" id="Blue-Bot-SN"><span class="sum-name">short</span></div>
-      <img class="picks blue" id="Blue-Pick-Bot" alt="Blue Pick 2" src="assets/banner-bottom.png?3"></grid-item>
-    <grid-item><div class="nameplate" id="Blue-Mid-SN"><span class="sum-name">Notsoshortanymoreking</span></div>
-      <img class="picks blue" id="Blue-Pick-Mid" alt="Blue Pick 3" src="assets/banner-middle.png?3"></grid-item>
-    <grid-item><div class="nameplate" id="Blue-Jgl-SN"><span class="sum-name">kindof inbetween</span></div>
-      <img class="picks blue" id="Blue-Pick-Jgl" alt="Blue Pick 4" src="assets/banner-jgl.png?3"></grid-item>
-    <grid-item><div class="nameplate" id="Blue-Top-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
-      <img class="picks blue" id="Blue-Pick-Top" alt="Blue Pick 5" src="assets/banner-top.png?3"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Blue-Sup-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
+      <img class="blue picks sup" id="Blue-Pick-Sup" alt="Blue Pick 1" src="assets/banner-sup.png?3"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Blue-Bot-SN"><span class="sum-name">short</span></div>
+      <img class="blue picks bot" id="Blue-Pick-Bot" alt="Blue Pick 2" src="assets/banner-bot.png?3"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Blue-Mid-SN"><span class="sum-name">Notsoshortanymoreking</span></div>
+      <img class="blue picks mid" id="Blue-Pick-Mid" alt="Blue Pick 3" src="assets/banner-mid.png?3"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Blue-Jgl-SN"><span class="sum-name">kindof inbetween</span></div>
+      <img class="blue picks jgl" id="Blue-Pick-Jgl" alt="Blue Pick 4" src="assets/banner-jgl.png?3"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Blue-Top-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
+      <img class="blue picks top" id="Blue-Pick-Top" alt="Blue Pick 5" src="assets/banner-top.png?3"></grid-item>
   </div>
   <div class="bans-blue">
     <!--From left to right-->
     <div id="blue-bans-div-p2" class="bans-div-p2">
-      <img class="bans blue" id="Blue-Ban-Sup" alt="Blue Ban 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
-      <img class="bans blue" id="Blue-Ban-Bot" alt="Blue Ban 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+      <img class="blue bans sup" id="Blue-Ban-Sup" alt="Blue Ban 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+      <img class="blue bans bot" id="Blue-Ban-Bot" alt="Blue Ban 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
     </div>
     <div id="blue-bans-div-p1" class="bans-div-p1">
-      <img class="bans blue" id="Blue-Ban-Mid" alt="Blue Ban 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
-      <img class="bans blue" id="Blue-Ban-Jgl" alt="Blue Ban 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
-      <img class="bans blue" id="Blue-Ban-Top" alt="Blue Ban 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+      <img class="blue bans mid" id="Blue-Ban-Mid" alt="Blue Ban 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+      <img class="blue bans jgl" id="Blue-Ban-Jgl" alt="Blue Ban 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
+      <img class="blue bans top" id="Blue-Ban-Top" alt="Blue Ban 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
     </div>
   </div>
 
   <div class="center">
-    <img class="logo" id="logo" alt="Logo" src="assets/Main_social.png">
+    <img class="logo" id="logo" alt="Logo" src="assets/RE_logo.png">
+    <div class="timer-box">
+      <span class="phase" id="phase">Ban Phase 1</span>
+      <span class="timer" id="timer">30</span>
+    </div>
   </div>
 
   <div id="red-picks-div" class="picks-div">
     <!--From left to right-->
-    <grid-item><div class="nameplate" id="Red-Top-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
-      <img class="picks blue" id="Red-Pick-Top" alt="Red Pick 1" src="assets/banner-top.png?3"></grid-item>
-    <grid-item><div class="nameplate" id="Red-Jgl-SN"><span class="sum-name">short</span></div>
-      <img class="picks blue" id="Red-Pick-Jgl" alt="Red Pick 2" src="assets/banner-jgl.png?3"></grid-item>
-    <grid-item><div class="nameplate" id="Red-Mid-SN"><span class="sum-name">Notsoshortanymoreking</span></div>
-      <img class="picks blue" id="Red-Pick-Mid" alt="Red Pick 3" src="assets/banner-middle.png?3"></grid-item>
-    <grid-item><div class="nameplate" id="Red-Bot-SN"><span class="sum-name">kindof inbetween</span></div>
-      <img class="picks blue" id="Red-Pick-Bot" alt="Red Pick 4" src="assets/banner-bottom.png?3"></grid-item>
-    <grid-item><div class="nameplate" id="Red-Sup-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
-      <img class="picks blue" id="Red-Pick-Sup" alt="Red Pick 5" src="assets/banner-sup.png?3"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Red-Top-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
+      <img class="red picks top" id="Red-Pick-Top" alt="Red Pick 1" src="assets/banner-top.png?2"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Red-Jgl-SN"><span class="sum-name">short</span></div>
+      <img class="red picks jgl" id="Red-Pick-Jgl" alt="Red Pick 2" src="assets/banner-jgl.png?2"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Red-Mid-SN"><span class="sum-name">Notsoshortanymoreking</span></div>
+      <img class="red picks mid" id="Red-Pick-Mid" alt="Red Pick 3" src="assets/banner-mid.png?2"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Red-Bot-SN"><span class="sum-name">kindof inbetween</span></div>
+      <img class="red picks bot" id="Red-Pick-Bot" alt="Red Pick 4" src="assets/banner-bot.png?2"></grid-item>
+    <grid-item class="picks-cont"><div class="nameplate" id="Red-Sup-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
+      <img class="red picks sup" id="Red-Pick-Sup" alt="Red Pick 5" src="assets/banner-sup.png?2"></grid-item>
   </div>
   <div class="bans-red">
     <div id="red-bans-div-p1" class="bans-div-p1">
-      <img class="bans red" id="Red-Ban-Top" alt="Red Ban 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
-      <img class="bans red" id="Red-Ban-Jgl" alt="Red Ban 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
-      <img class="bans red" id="Red-Ban-Mid" alt="Red Ban 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
+      <img class="red bans top" id="Red-Ban-Top" alt="Red Ban 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
+      <img class="red bans jgl" id="Red-Ban-Jgl" alt="Red Ban 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
+      <img class="red bans mid" id="Red-Ban-Mid" alt="Red Ban 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
     </div>
     <div id="red-bans-div-p2" class="bans-div-p2">
-      <img class="bans red" id="Red-Ban-Bot" alt="Red Ban 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
-      <img class="bans red" id="Red-Ban-Sup" alt="Red Ban 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
+      <img class="red bans bot" id="Red-Ban-Bot" alt="Red Ban 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
+      <img class="red bans sup" id="Red-Ban-Sup" alt="Red Ban 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
     </div>
   </div>
 </div>
 <script>
-const blSupSn = document.getElementById('Blue-Sup-SN');
-const blBotSn = document.getElementById('Blue-Bot-SN');
-const blMidSn = document.getElementById('Blue-Mid-SN');
-const blJglSn = document.getElementById('Blue-Jgl-SN');
-const blTopSn = document.getElementById('Blue-Top-SN');
-const rdSupSn = document.getElementById('Red-Sup-SN');
-const rdBotSn = document.getElementById('Red-Bot-SN');
-const rdMidSn = document.getElementById('Red-Mid-SN');
-const rdJglSn = document.getElementById('Red-Jgl-SN');
-const rdTopSn = document.getElementById('Red-Top-SN');
-const outputContainer = document.querySelector('.nameplate');
+const SummonerNames = [document.getElementById("Blue-Sup-SN"), document.getElementById("Blue-Bot-SN"), document.getElementById("Blue-Mid-SN"), document.getElementById("Blue-Jgl-SN"), document.getElementById("Blue-Top-SN"), document.getElementById("Red-Top-SN"), document.getElementById("Red-Jgl-SN"), document.getElementById("Red-Mid-SN"), document.getElementById("Red-Bot-SN"), document.getElementById("Red-Sup-SN")]
+const PickBans = [document.getElementById("Blue-Pick-Sup"),document.getElementById("Blue-Pick-Bot"),document.getElementById("Blue-Pick-Mid"),document.getElementById("Blue-Pick-Jgl"),document.getElementById("Blue-Pick-Top"),document.getElementById("Blue-Ban-Sup"),document.getElementById("Blue-Ban-Bot"),document.getElementById("Blue-Ban-Mid"),document.getElementById("Blue-Ban-Jgl"),document.getElementById("Blue-Ban-Top"),document.getElementById("Red-Pick-Top"),document.getElementById("Red-Pick-Jgl"),document.getElementById("Red-Pick-Mid"),document.getElementById("Red-Pick-Bot"),document.getElementById("Red-Pick-Sup"),document.getElementById("Red-Ban-Top"),document.getElementById("Red-Ban-Jgl"),document.getElementById("Red-Ban-Mid"),document.getElementById("Red-Ban-Bot"),document.getElementById("Red-Ban-Sup")]
+
+var timer = document.getElementById("timer");
+const outputContainer = document.querySelector(".nameplate");
 var end = 0;
 var interval = setInterval(start, 500);
 var last_timestamp = 0;
 
 async function start(){
   var now = "?".concat(Date.now())
-  var jsonFile = await fetch('links.json'.concat(now)).then(res => res.json());
-
+  var jsonFile = await fetch("links.json".concat(now)).then(res => res.json());
+  timer.textContent = jsonFile["timer"];
+  
   var new_timestamp = jsonFile.timestamp
 
   if (last_timestamp == new_timestamp){
@@ -96,27 +95,10 @@ async function start(){
   }
   
   last_timestamp = new_timestamp;
-  document.getElementById("Blue-Pick-Sup").src=jsonFile.links.blue.picks["sup"];
-  document.getElementById("Blue-Pick-Bot").src=jsonFile.links.blue.picks["bot"];
-  document.getElementById("Blue-Pick-Mid").src=jsonFile.links.blue.picks["mid"];
-  document.getElementById("Blue-Pick-Jgl").src=jsonFile.links.blue.picks["jgl"];
-  document.getElementById("Blue-Pick-Top").src=jsonFile.links.blue.picks["top"];
-  document.getElementById("Blue-Ban-Sup").src=jsonFile.links.blue.bans["sup"];
-  document.getElementById("Blue-Ban-Bot").src=jsonFile.links.blue.bans["bot"];
-  document.getElementById("Blue-Ban-Mid").src=jsonFile.links.blue.bans["mid"];
-  document.getElementById("Blue-Ban-Jgl").src=jsonFile.links.blue.bans["jgl"];
-  document.getElementById("Blue-Ban-Top").src=jsonFile.links.blue.bans["top"];
-
-  document.getElementById("Red-Pick-Top").src=jsonFile.links.red.picks["top"];
-  document.getElementById("Red-Pick-Jgl").src=jsonFile.links.red.picks["jgl"];
-  document.getElementById("Red-Pick-Mid").src=jsonFile.links.red.picks["mid"];
-  document.getElementById("Red-Pick-Bot").src=jsonFile.links.red.picks["bot"];
-  document.getElementById("Red-Pick-Sup").src=jsonFile.links.red.picks["sup"];
-  document.getElementById("Red-Ban-Top").src=jsonFile.links.red.bans["top"];
-  document.getElementById("Red-Ban-Jgl").src=jsonFile.links.red.bans["jgl"];
-  document.getElementById("Red-Ban-Mid").src=jsonFile.links.red.bans["mid"];
-  document.getElementById("Red-Ban-Bot").src=jsonFile.links.red.bans["bot"];
-  document.getElementById("Red-Ban-Sup").src=jsonFile.links.red.bans["sup"];
+  for (const elem of PickBans){
+    var classes = elem.classList;
+    elem.src=jsonFile.links[classes[0]][classes[1]][classes[2]]
+  }
 }
 
 function stopq(){
@@ -131,33 +113,27 @@ function resize_to_fit(output) {
     output.style.fontSize = (parseFloat(fontSize) - 1) + 'px';
     resize_to_fit(output);  
   } else{
-    output.style.fontSize = (parseFloat(fontSize) - 2) + 'px';
+    output.style.fontSize = (parseFloat(fontSize) - 1) + 'px';
   }
 }
 
-window.onload = function() {
+window.onload = async function() {
+  var now = "?".concat(Date.now())
+  var jsonFile = await fetch("links.json".concat(now)).then(res => res.json());
+  var smallestSize = '40px';
 
-  blSupSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(blSupSn.firstChild);
-  blBotSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(blBotSn.firstChild);
-  blMidSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(blMidSn.firstChild);
-  blJglSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(blJglSn.firstChild);
-  blTopSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(blTopSn.firstChild);
-
-  rdSupSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(rdSupSn.firstChild);
-  rdBotSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(rdBotSn.firstChild);
-  rdMidSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(rdMidSn.firstChild);
-  rdJglSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(rdJglSn.firstChild);
-  rdTopSn.firstChild.style.fontSize = '50px';
-  resize_to_fit(rdTopSn.firstChild);
+  for (const SN of SummonerNames){
+    SN.firstChild.textContent = jsonFile.sumNames[SN.id];
+    SN.firstChild.style.fontSize = '40px';
+    resize_to_fit(SN.firstChild);
+    if (SN.firstChild.style.fontSize < smallestSize){
+      smallestSize = SN.firstChild.style.fontSize;
+    }
+  }
+  // If we want all the names to be the same size, else they're all their own fitting size
+  for (const SN of SummonerNames){ 
+    SN.firstChild.style.fontSize = smallestSize;
+  }
 };
 
 </script>
