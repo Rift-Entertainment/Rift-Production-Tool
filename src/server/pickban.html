@@ -4,36 +4,47 @@
 
 <!--Create a button-->
 
-<div id="debug">
+<div id="Debug">
 <h1>Debugging tools</h1>
 <button type="button" onclick="stopq()">Stop querying</button>
 <button type="button" onclick="resize_to_fit(blSupSn.firstChild)">Update name</button>
 </div>
 
-<link href="StyleSheet_BaseInterface.css?122" rel="stylesheet">
+<link href="StyleSheet_BaseInterface.css?1" rel="stylesheet">
 
 <!--Create image-->
-<div id="container">
-  <div id="blue-picks-div" class="picks-div">
+<div id="Container">
+  <div class="botched"> </div>
+  <div id="Blue-Picks-Div" class="picks-div">
     <!--From left to right-->
-    <grid-item class="picks-cont"><div class="nameplate" id="Blue-Sup-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
-      <img class="blue picks sup" id="Blue-Pick-Sup" alt="Blue Pick 1" src="assets/banner-sup.png?3"></grid-item>
-    <grid-item class="picks-cont"><div class="nameplate" id="Blue-Bot-SN"><span class="sum-name">short</span></div>
-      <img class="blue picks bot" id="Blue-Pick-Bot" alt="Blue Pick 2" src="assets/banner-bot.png?3"></grid-item>
+    <grid-item ><div class="picks-cont"><div class="nameplate" id="Blue-Sup-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
+      <img class="blue summs sup" id="Blue-Summ1-Sup" alt="Blue Summ1 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue summs sup second" id="Blue-Summ2-Sup" alt="Blue Summ2 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue picks sup" id="Blue-Pick-Sup" alt="Blue Pick 1" src="assets/banner-sup.png"></div></grid-item>
+    <grid-item><div class="picks-cont"><div class="nameplate" id="Blue-Bot-SN"><span class="sum-name">short</span></div>
+      <img class="blue summs bot" id="Blue-Summ1-Bot" alt="Blue Summ1 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue summs bot second" id="Blue-Summ2-Bot" alt="Blue Summ2 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue picks bot" id="Blue-Pick-Bot" alt="Blue Pick 2" src="assets/banner-bot.png"></div></grid-item>
     <grid-item class="picks-cont"><div class="nameplate" id="Blue-Mid-SN"><span class="sum-name">Notsoshortanymoreking</span></div>
-      <img class="blue picks mid" id="Blue-Pick-Mid" alt="Blue Pick 3" src="assets/banner-mid.png?3"></grid-item>
+      <img class="blue summs mid" id="Blue-Summ1-Mid" alt="Blue Summ1 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue summs mid second" id="Blue-Summ2-Mid" alt="Blue Summ2 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue picks mid" id="Blue-Pick-Mid" alt="Blue Pick 3" src="assets/banner-mid.png"></grid-item>
     <grid-item class="picks-cont"><div class="nameplate" id="Blue-Jgl-SN"><span class="sum-name">kindof inbetween</span></div>
-      <img class="blue picks jgl" id="Blue-Pick-Jgl" alt="Blue Pick 4" src="assets/banner-jgl.png?3"></grid-item>
+      <img class="blue summs jgl" id="Blue-Summ1-Jgl" alt="Blue Summ1 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue summs jgl second" id="Blue-Summ2-Jgl" alt="Blue Summ2 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue picks jgl" id="Blue-Pick-Jgl" alt="Blue Pick 4" src="assets/banner-jgl.png"></grid-item>
     <grid-item class="picks-cont"><div class="nameplate" id="Blue-Top-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
-      <img class="blue picks top" id="Blue-Pick-Top" alt="Blue Pick 5" src="assets/banner-top.png?3"></grid-item>
+      <img class="blue summs top" id="Blue-Summ1-Top" alt="Blue Summ1 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue summs top second" id="Blue-Summ2-Top" alt="Blue Summ2 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="blue picks top" id="Blue-Pick-Top" alt="Blue Pick 5" src="assets/banner-top.png"></grid-item>
   </div>
   <div class="bans-blue">
     <!--From left to right-->
-    <div id="blue-bans-div-p2" class="bans-div-p2">
+    <div id="Blue-Bans-Div-P2" class="bans-div-p2">
       <img class="blue bans sup" id="Blue-Ban-Sup" alt="Blue Ban 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
       <img class="blue bans bot" id="Blue-Ban-Bot" alt="Blue Ban 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
     </div>
-    <div id="blue-bans-div-p1" class="bans-div-p1">
+    <div id="Blue-Bans-Div-P1" class="bans-div-p1">
       <img class="blue bans mid" id="Blue-Ban-Mid" alt="Blue Ban 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
       <img class="blue bans jgl" id="Blue-Ban-Jgl" alt="Blue Ban 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
       <img class="blue bans top" id="Blue-Ban-Top" alt="Blue Ban 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png">
@@ -41,33 +52,43 @@
   </div>
 
   <div class="center">
-    <img class="logo" id="logo" alt="Logo" src="assets/RE_logo.png">
+    <img class="logo" id="Logo" alt="Logo" src="assets/RE_logo.png">
     <div class="timer-box">
-      <span class="phase" id="phase">Ban Phase 1</span>
-      <span class="timer" id="timer">30</span>
+      <span class="phase" id="Phase">Ban Phase 1</span>
+      <span class="timer" id="Timer">30</span>
     </div>
   </div>
 
-  <div id="red-picks-div" class="picks-div">
+  <div id="Red-Picks-Div" class="picks-div">
     <!--From left to right-->
     <grid-item class="picks-cont"><div class="nameplate" id="Red-Top-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
-      <img class="red picks top" id="Red-Pick-Top" alt="Red Pick 1" src="assets/banner-top.png?2"></grid-item>
+      <img class="red summs top" id="Red-Summ1-Top" alt="Red Summ1 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red summs top second" id="Red-Summ2-Top" alt="Red Summ2 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red picks top" id="Red-Pick-Top" alt="Red Pick 1" src="assets/banner-top.png"></grid-item>
     <grid-item class="picks-cont"><div class="nameplate" id="Red-Jgl-SN"><span class="sum-name">short</span></div>
-      <img class="red picks jgl" id="Red-Pick-Jgl" alt="Red Pick 2" src="assets/banner-jgl.png?2"></grid-item>
+      <img class="red summs jgl" id="Red-Summ1-Jgl" alt="Red Summ1 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red summs jgl second" id="Red-Summ2-Jgl" alt="Red Summ2 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red picks jgl" id="Red-Pick-Jgl" alt="Red Pick 2" src="assets/banner-jgl.png"></grid-item>
     <grid-item class="picks-cont"><div class="nameplate" id="Red-Mid-SN"><span class="sum-name">Notsoshortanymoreking</span></div>
-      <img class="red picks mid" id="Red-Pick-Mid" alt="Red Pick 3" src="assets/banner-mid.png?2"></grid-item>
+      <img class="red summs mid" id="Red-Summ1-Mid" alt="Red Summ1 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red summs mid second" id="Red-Summ2-Mid" alt="Red Summ2 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red picks mid" id="Red-Pick-Mid" alt="Red Pick 3" src="assets/banner-mid.png"></grid-item>
     <grid-item class="picks-cont"><div class="nameplate" id="Red-Bot-SN"><span class="sum-name">kindof inbetween</span></div>
-      <img class="red picks bot" id="Red-Pick-Bot" alt="Red Pick 4" src="assets/banner-bot.png?2"></grid-item>
+      <img class="red summs bot" id="Red-Summ1-Bot" alt="Red Summ1 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red summs bot second" id="Red-Summ2-Bot" alt="Red Summ2 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red picks bot" id="Red-Pick-Bot" alt="Red Pick 4" src="assets/banner-bot.png"></grid-item>
     <grid-item class="picks-cont"><div class="nameplate" id="Red-Sup-SN"><span class="sum-name">Notsoshortanymoreking andevenlongernow</span></div>
-      <img class="red picks sup" id="Red-Pick-Sup" alt="Red Pick 5" src="assets/banner-sup.png?2"></grid-item>
+      <img class="red summs top" id="Red-Summ1-Top" alt="Red Summ1 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red summs top second" id="Red-Summ2-Top" alt="Red Summ2 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png">
+      <img class="red picks sup" id="Red-Pick-Sup" alt="Red Pick 5" src="assets/banner-sup.png"></grid-item>
   </div>
   <div class="bans-red">
-    <div id="red-bans-div-p1" class="bans-div-p1">
+    <div id="Red-Bans-Div-P1" class="bans-div-p1">
       <img class="red bans top" id="Red-Ban-Top" alt="Red Ban 1" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
       <img class="red bans jgl" id="Red-Ban-Jgl" alt="Red Ban 2" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
       <img class="red bans mid" id="Red-Ban-Mid" alt="Red Ban 3" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
     </div>
-    <div id="red-bans-div-p2" class="bans-div-p2">
+    <div id="Red-Bans-Div-P2" class="bans-div-p2">
       <img class="red bans bot" id="Red-Ban-Bot" alt="Red Ban 4" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
       <img class="red bans sup" id="Red-Ban-Sup" alt="Red Ban 5" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png">
     </div>
@@ -77,7 +98,9 @@
 const SummonerNames = [document.getElementById("Blue-Sup-SN"), document.getElementById("Blue-Bot-SN"), document.getElementById("Blue-Mid-SN"), document.getElementById("Blue-Jgl-SN"), document.getElementById("Blue-Top-SN"), document.getElementById("Red-Top-SN"), document.getElementById("Red-Jgl-SN"), document.getElementById("Red-Mid-SN"), document.getElementById("Red-Bot-SN"), document.getElementById("Red-Sup-SN")]
 const PickBans = [document.getElementById("Blue-Pick-Sup"),document.getElementById("Blue-Pick-Bot"),document.getElementById("Blue-Pick-Mid"),document.getElementById("Blue-Pick-Jgl"),document.getElementById("Blue-Pick-Top"),document.getElementById("Blue-Ban-Sup"),document.getElementById("Blue-Ban-Bot"),document.getElementById("Blue-Ban-Mid"),document.getElementById("Blue-Ban-Jgl"),document.getElementById("Blue-Ban-Top"),document.getElementById("Red-Pick-Top"),document.getElementById("Red-Pick-Jgl"),document.getElementById("Red-Pick-Mid"),document.getElementById("Red-Pick-Bot"),document.getElementById("Red-Pick-Sup"),document.getElementById("Red-Ban-Top"),document.getElementById("Red-Ban-Jgl"),document.getElementById("Red-Ban-Mid"),document.getElementById("Red-Ban-Bot"),document.getElementById("Red-Ban-Sup")]
 
-var timer = document.getElementById("timer");
+const SummonerSpells = [document.getElementById("Blue-Summ1-Sup"),document.getElementById("Blue-Summ2-Sup"),document.getElementById("Blue-Summ1-Bot"),document.getElementById("Blue-Summ2-Bot"),document.getElementById("Blue-Summ1-Mid"),document.getElementById("Blue-Summ2-Mid"),document.getElementById("Blue-Summ1-Jgl"),document.getElementById("Blue-Summ2-Jgl"),document.getElementById("Blue-Summ1-Top"),document.getElementById("Blue-Summ2-Top"),document.getElementById("Red-Summ1-Top"),document.getElementById("Red-Summ2-Top"),document.getElementById("Red-Summ1-Jgl"),document.getElementById("Red-Summ2-Jgl"),document.getElementById("Red-Summ1-Mid"),document.getElementById("Red-Summ2-Mid"),document.getElementById("Red-Summ1-Bot"),document.getElementById("Red-Summ2-Bot"),document.getElementById("Red-Summ1-Sup"),document.getElementById("Red-Summ2-Sup")]
+
+var timer = document.getElementById("Timer");
 const outputContainer = document.querySelector(".nameplate");
 var end = 0;
 var interval = setInterval(start, 500);
@@ -95,9 +118,14 @@ async function start(){
   }
   
   last_timestamp = new_timestamp;
-  for (const elem of PickBans){
-    var classes = elem.classList;
-    elem.src=jsonFile.links[classes[0]][classes[1]][classes[2]]
+  for (var i = 0; i < 10; ++i){
+    var classes = PickBans[i].classList;
+    PickBans[i].src=jsonFile.links[classes[0]][classes[1]][classes[2]];
+    if (i%2 == 0){
+      var sumClasses = SummonerSpells[i].classList;
+      SummonerSpells[i].src=jsonFile.links[sumClasses[0]][sumClasses[1]][sumClasses[2]][0];
+      SummonerSpells[i+1].src=jsonFile.links[sumClasses[0]][sumClasses[1]][sumClasses[2]][1];
+    }
   }
 }
 
@@ -120,11 +148,11 @@ function resize_to_fit(output) {
 window.onload = async function() {
   var now = "?".concat(Date.now())
   var jsonFile = await fetch("links.json".concat(now)).then(res => res.json());
-  var smallestSize = '40px';
+  var smallestSize = '25px';
 
   for (const SN of SummonerNames){
     SN.firstChild.textContent = jsonFile.sumNames[SN.id];
-    SN.firstChild.style.fontSize = '40px';
+    SN.firstChild.style.fontSize = '25px';
     resize_to_fit(SN.firstChild);
     if (SN.firstChild.style.fontSize < smallestSize){
       smallestSize = SN.firstChild.style.fontSize;

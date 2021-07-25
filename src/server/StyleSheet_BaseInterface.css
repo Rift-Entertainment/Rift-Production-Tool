@@ -3,17 +3,27 @@
   --asset-perc: calc(var(--banner-width)/308);
   --banner-height: calc(560*var(--asset-perc));
   --ban-size: calc(120*var(--asset-perc));
+  --sum-size: calc(64*var(--asset-perc));
   --name-plate-height: var(--ban-size);
   --base-padding: 5px;
   --base-color: #02052b;
 }
 
-#container{
+#Container{
   display: grid;
   position: absolute;
 
+  grid-column-gap: 1px;
   grid-template-columns: calc(5*var(--banner-width))px var(--banner-width) calc(5*var(--banner-width))px ;
   grid-template-rows: var(--banner-height) var(--ban-size);
+}
+
+.botched{
+  position: absolute;
+  z-index: -1;
+  height: var(--banner-height);
+  width: 100%;
+  background-color: white;
 }
 
 .center{
@@ -60,12 +70,30 @@
   font-size: 15px;
 }
 
+.picks-div{
+  display: grid;
+  grid-gap: 1px;
+  background-color: white;
+  grid-template-columns: var(--banner-width) var(--banner-width) var(--banner-width) var(--banner-width) var(--banner-width);
+}
+
 .picks-cont{
+  position: relative;
   width: var(--banner-width);
   height: var(--banner-height);
   background-color: var(--base-color);
 }
 
+/*Original size for summoner spell is:  64x64*/
+.summs{
+  position: absolute;
+  width: var(--sum-size);
+  height: var(--sum-size);
+  top: calc(var(--banner-height) - var(--name-plate-height) - var(--sum-size));
+}
+.second{
+  right: -0px;
+}
 /*Original size for champion banners:  308x560*/
 .picks{
   width: var(--banner-width);
@@ -75,11 +103,20 @@
   width: var(--ban-size); 
 }
 
-.picks-div{
-  display: grid;
-  grid-gap: 1px;
-  background-color: white;
-  grid-template-columns: var(--banner-width) var(--banner-width) var(--banner-width) var(--banner-width) var(--banner-width);
+.nameplate{
+  text-transform: uppercase;
+  box-sizing: border-box;
+  position: absolute;
+  display: inline;
+  color: white;
+  background-color: var(--base-color);
+  top: calc(var(--banner-height) - var(--name-plate-height));
+  height: var(--name-plate-height);
+  width: var(--banner-width);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  line-height: var(--name-plate-height);
+  font-weight: bold;
 }
 
 #Blue-Sup-SN{grid-column: 1;}
@@ -124,22 +161,6 @@
 .bans-red{
   grid-column: 3;
   grid-row: 2;
-}
-
-.nameplate{
-  text-transform: uppercase;
-  box-sizing: border-box;
-  position: absolute;
-  display: inline;
-  color: white;
-  background-color: var(--base-color);
-  top: calc(var(--banner-height) - var(--name-plate-height));
-  height: var(--name-plate-height);
-  width: var(--banner-width);
-  font-family: Arial, sans-serif;
-  text-align: center;
-  line-height: var(--name-plate-height);
-  font-weight: bold;
 }
 
 span{
