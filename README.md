@@ -55,7 +55,7 @@ For each step the way they will be executed will be described more or less preci
     - Every 0.5 seconds the program updates the client's status, if an update happened ((summoner) spell, pick/ban, swap (,perk change)), the necessary link is updated in the json. Also, the timer is updated every 0.5 second.
     - Once the champ select is over, the program may stop running
 
-##### Design
+#### Design
 While the website is hosted on a webserver, with notably the json in the same directory on the server, a python program uses the LCU API to gaher information from the ongoing champion select. Said program uses the library "paramiko" in order to establish a ssh conenction to the machine hosting the website, more precisely it uses SFTP to open the json file and update its content and save it again on the server machine.
 
 #### Step 2 - (No tournament API) Stat tracking
