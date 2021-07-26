@@ -1,5 +1,5 @@
 {
-  "timestamp": 1,
+  "timestamp": 11,
   "timer": 30,
   "links": {
     "blue": {
@@ -11,7 +11,7 @@
         "top": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gragas/skins/base/gragasloadscreen.jpg"
       },
       "bans": {
-        "sup": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
+        "sup": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png",
         "bot": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/69.png",
         "mid": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/13.png",
         "jgl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/44.png",
@@ -34,11 +34,11 @@
         "sup": "assets/banner-sup.png?2"
       },
       "bans": {
-        "top": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
-        "jgl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
-        "mid": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
-        "bot": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
-        "sup": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png"
+        "top": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png",
+        "jgl": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png",
+        "mid": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png",
+        "bot": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png",
+        "sup": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png"
       },
       "summs": {
         "top": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png", "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_empty.png"],
@@ -61,9 +61,10 @@
     "Red-Bot-SN":"RedBot",
     "Red-Sup-SN":"RedSup"
   },
-  "picking":"",
-  "banning":"",
-  "locked":"",
+  "phase": "",
+  "picking":["red", ""],
+  "banning":["blue", ""],
+  "locking":["red", ""],
   "summonerSpellnames": {
     "none": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_emtpy.png",
     "cleanse": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_boost.png",
@@ -75,5 +76,9 @@
     "teleport": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_teleport.png",
     "barrier": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summonerbarrier.png",
     "ignite": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summonerignite.png"
+  },
+  "base-links": {
+    "picks":"assets/banner-top.png",
+    "bans":"https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png"
   }
 }
