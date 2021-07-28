@@ -61,10 +61,10 @@
     "Red-Bot-SN":"RedBot",
     "Red-Sup-SN":"RedSup"
   },
-  "phase": "",
-  "picking":["red", ""],
-  "banning":["blue", ""],
-  "locking":["red", ""],
+  "phase": "banning",
+  "picking":["blue", "Blue-PickAnim-Sup"],
+  "banning":["red", "Red-Ban-Top"],
+  "locking":["blue", "Blue-PickAnim-Top"],
   "summonerSpellnames": {
     "none": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_emtpy.png",
     "cleanse": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_boost.png",

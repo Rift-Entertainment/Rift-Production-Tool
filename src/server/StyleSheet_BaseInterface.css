@@ -111,16 +111,20 @@
   animation: ;
 }
 .picking-blue{
-  animation: blue-pulse 2s infinite;
+  --animation-color: var(--blue-color);
+  animation: anim-pulse 2s infinite;
 }
 .picking-red{
-  animation: red-pulse 2s infinite;
+  --animation-color: var(--red-color);
+  animation: anim-pulse 2s infinite;
 }
 .locking-blue{
-  animation: blue-locking 1s 1;
+  --animation-color: var(--blue-color);
+  animation: anim-locking 1s 1;
 }
 .locking-red{
-  animation: red-locking 1s 1;
+  --animation-color: var(--red-color);
+  animation: anim-locking 1s 1;
 }
 /*Original size for champion icons:  120x120*/
 .bans{
@@ -135,10 +139,12 @@
   z-index: 1;
 }
 .banning-blue{
-  animation: blue-banning 2s infinite;
+  --animation-color: var(--blue-color);
+  animation: anim-banning 2s infinite;
 }
 .banning-red{
-  animation: red-banning 2s infinite;
+  --animation-color: var(--red-color);
+  animation: anim-banning 2s infinite;
 }
 
 .nameplate{
@@ -208,70 +214,36 @@ span{
   vertical-align: middle;
 }
 
-@keyframes blue-pulse {
-  0% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.0) 85%);}
-  5% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.05) 85%);}
-  10% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.10) 85%);}
-  15% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.15) 85%);}
-  20% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.20) 85%);}
-  25% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.25) 85%);}
-  30% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.30) 85%);}
-  35% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.35) 85%);}
-  40% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.40) 85%);}
-  50% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.40) 85%);}
-  60% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.40) 85%);}
-  65% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.35) 85%);}
-  70% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.30) 85%);}
-  75% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.25) 85%);}
-  80% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.20) 85%);}
-  85% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.15) 85%);}
-  90% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.10) 85%);}
-  95% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.05) 85%);}
-  100% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--blue-color),0.0) 85%);}
+@keyframes anim-pulse {
+  0% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.0) 85%);}
+  5% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.05) 85%);}
+  10% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.10) 85%);}
+  15% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.15) 85%);}
+  20% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.20) 85%);}
+  25% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.25) 85%);}
+  30% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.30) 85%);}
+  35% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.35) 85%);}
+  40% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.40) 85%);}
+  50% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.40) 85%);}
+  60% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.40) 85%);}
+  65% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.35) 85%);}
+  70% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.30) 85%);}
+  75% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.25) 85%);}
+  80% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.20) 85%);}
+  85% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.15) 85%);}
+  90% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.10) 85%);}
+  95% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.05) 85%);}
+  100% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--animation-color),0.0) 85%);}
 }
-@keyframes blue-locking {
-  0% {box-shadow: inset 0 0 0 rgba(var(--blue-color),1);}
-  40% {box-shadow: inset 0 0 18px rgba(var(--blue-color),10);}
-  50% {box-shadow: inset 0 0 20px rgba(var(--blue-color),10);}
-  60% {box-shadow: inset 0 0 18px rgba(var(--blue-color),10);}
-  100% {box-shadow: inset 0 0 0 rgba(var(--blue-color),1);}
+@keyframes anim-locking {
+  0% {box-shadow: inset 0 0 0 rgba(var(--animation-color),1);}
+  40% {box-shadow: inset 0 0 18px rgba(var(--animation-color),10);}
+  50% {box-shadow: inset 0 0 20px rgba(var(--animation-color),10);}
+  60% {box-shadow: inset 0 0 18px rgba(var(--animation-color),10);}
+  100% {box-shadow: inset 0 0 0 rgba(var(--animation-color),1);}
 }
-@keyframes blue-banning{
-  0% {box-shadow: inset 0 0 var(--ban-size) rgba(var(--blue-color),0.25);}
-  50% {box-shadow: inset 0 0 var(--ban-size) rgba(var(--blue-color),1);}
-  100% {box-shadow: inset 0 0 var(--ban-size) rgba(var(--blue-color),0.25);} 
-}
-
-@keyframes red-pulse {
-  0% {background: radial-gradient(circle, var(--no-color) 0%, rgba(var(--red-color),0.0) 75%);}
-  5% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.05) 85%);}
-  10% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.10) 85%);}
-  15% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.15) 85%);}
-  20% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.20) 85%);}
-  25% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.25) 85%);}
-  30% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.30) 85%);}
-  35% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.35) 85%);}
-  40% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.40) 85%);}
-  50% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.40) 85%);}
-  60% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.40) 85%);}
-  65% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.35) 85%);}
-  70% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.30) 85%);}
-  75% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.25) 85%);}
-  80% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.20) 85%);}
-  85% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.15) 85%);}
-  90% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.10) 85%);}
-  95% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.05) 85%);}
-  100% {background: radial-gradient(circle, var(--no-color) 25%, rgba(var(--red-color),0.0) 85%);}
-}
-@keyframes red-locking {
-  0% {box-shadow: inset 0 0 0 rgba(var(--red-color),1);}
-  40% {box-shadow: inset 0 0 18px rgba(var(--red-color),10);}
-  50% {box-shadow: inset 0 0 20px rgba(var(--red-color),10);}
-  60% {box-shadow: inset 0 0 18px rgba(var(--red-color),10);}
-  100% {box-shadow: inset 0 0 0 rgba(var(--red-color),1);}
-}
-@keyframes red-banning{
-  0% {box-shadow: inset 0 0 var(--ban-size) rgba(var(--red-color),0.25);}
-  50% {box-shadow: inset 0 0 var(--ban-size) rgba(var(--red-color),1);}
-  100% {box-shadow: inset 0 0 var(--ban-size) rgba(var(--red-color),0.25);} 
+@keyframes anim-banning{
+  0% {box-shadow: inset 0 0 var(--ban-size) rgba(var(--animation-color),0.25);}
+  50% {box-shadow: inset 0 0 var(--ban-size) rgba(var(--animation-color),1);}
+  100% {box-shadow: inset 0 0 var(--ban-size) rgba(var(--animation-color),0.25);} 
 }

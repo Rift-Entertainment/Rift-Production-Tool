@@ -2,6 +2,13 @@
 <html>
 <body>
 
+<!--Endpoints to use: (?)
+/lol-champ-select/v1/summoners/{slotId}
+/lol-champ-select/v1/session/timer
+/lol-champ-select/v1/session
+/lol/summoner/v4/summoners/{encryptedSummonerId}
+-->
+
 <!--Create a button-->
 
 <div id="Debug">
@@ -143,6 +150,7 @@ async function start(){
   }
   if (jsonFile.phase == "picking"){
       picker = document.getElementById(jsonFile.picking[1]);
+      console.log(picker.previousElementSibling)
       if (picker != null){
         picker.classList.remove(picker.classList[1]);
         picker.classList.add(PickAnimations[jsonFile.picking[0]]);
@@ -159,7 +167,6 @@ async function start(){
   if (locker != null){
     locker.classList.remove(locker.classList[1]);
     locker.classList.add(LockAnimations[jsonFile.locking[0]]);
-    console.log(locker.classList)
   }
 }
 
