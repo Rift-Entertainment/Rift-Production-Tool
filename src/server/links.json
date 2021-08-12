@@ -27,14 +27,14 @@
     },
     "red": {
       "picks": {
-        "top": "assets/banner-top.png?2",
+        "top": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/base/brandloadscreen.jpg",
         "jgl": "assets/banner-jgl.png?2",
         "mid": "assets/banner-mid.png?2",
         "bot": "assets/banner-bot.png?2",
         "sup": "assets/banner-sup.png?2"
       },
       "bans": {
-        "top": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png",
+        "top": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/69.png",
         "jgl": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png",
         "mid": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png",
         "bot": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champ-select/global/default/images/ban-showcase/icon-ban.png",
@@ -61,10 +61,10 @@
     "Red-Bot-SN":"RedBot",
     "Red-Sup-SN":"RedSup"
   },
-  "phase": "banning",
-  "picking":["blue", "Blue-PickAnim-Sup"],
-  "banning":["red", "Red-Ban-Top"],
-  "locking":["blue", "Blue-PickAnim-Top"],
+  "phase": "picking",
+  "picking":["red", "Red-PickAnim-Mid"],
+  "banning":["red", "Red-Ban-Jgl"],
+  "locking":["red", "Red-Ban-Jgl"],
   "summonerSpellnames": {
     "none": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_emtpy.png",
     "cleanse": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/summoner_boost.png",

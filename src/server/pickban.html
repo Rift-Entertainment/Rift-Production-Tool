@@ -112,61 +112,82 @@
   </div>
 </div>
 <script>
+//Lists containing various elements of the interface
 const SummonerNames = [document.getElementById("Blue-Sup-SN"), document.getElementById("Blue-Bot-SN"), document.getElementById("Blue-Mid-SN"), document.getElementById("Blue-Jgl-SN"), document.getElementById("Blue-Top-SN"), document.getElementById("Red-Top-SN"), document.getElementById("Red-Jgl-SN"), document.getElementById("Red-Mid-SN"), document.getElementById("Red-Bot-SN"), document.getElementById("Red-Sup-SN")]
 const PickBans = [document.getElementById("Blue-Pick-Sup"),document.getElementById("Blue-Pick-Bot"),document.getElementById("Blue-Pick-Mid"),document.getElementById("Blue-Pick-Jgl"),document.getElementById("Blue-Pick-Top"),document.getElementById("Blue-Ban-Sup"),document.getElementById("Blue-Ban-Bot"),document.getElementById("Blue-Ban-Mid"),document.getElementById("Blue-Ban-Jgl"),document.getElementById("Blue-Ban-Top"),document.getElementById("Red-Pick-Top"),document.getElementById("Red-Pick-Jgl"),document.getElementById("Red-Pick-Mid"),document.getElementById("Red-Pick-Bot"),document.getElementById("Red-Pick-Sup"),document.getElementById("Red-Ban-Top"),document.getElementById("Red-Ban-Jgl"),document.getElementById("Red-Ban-Mid"),document.getElementById("Red-Ban-Bot"),document.getElementById("Red-Ban-Sup")]
 
 const SummonerSpells = [document.getElementById("Blue-Summ1-Sup"),document.getElementById("Blue-Summ2-Sup"),document.getElementById("Blue-Summ1-Bot"),document.getElementById("Blue-Summ2-Bot"),document.getElementById("Blue-Summ1-Mid"),document.getElementById("Blue-Summ2-Mid"),document.getElementById("Blue-Summ1-Jgl"),document.getElementById("Blue-Summ2-Jgl"),document.getElementById("Blue-Summ1-Top"),document.getElementById("Blue-Summ2-Top"),document.getElementById("Red-Summ1-Top"),document.getElementById("Red-Summ2-Top"),document.getElementById("Red-Summ1-Jgl"),document.getElementById("Red-Summ2-Jgl"),document.getElementById("Red-Summ1-Mid"),document.getElementById("Red-Summ2-Mid"),document.getElementById("Red-Summ1-Bot"),document.getElementById("Red-Summ2-Bot"),document.getElementById("Red-Summ1-Sup"),document.getElementById("Red-Summ2-Sup")]
 
+// Dictionnaries used to get the right animation class in function of side
 const PickAnimations = {"blue": "picking-blue", "red": "picking-red"}
 const LockAnimations = {"blue": "locking-blue", "red": "locking-red"}
 const BanAnimations = {"blue": "banning-blue", "red": "banning-red"}
 
+// Constants and variables
 var timer = document.getElementById("Timer");
 const outputContainer = document.querySelector(".nameplate");
 var end = 0;
 var interval = setInterval(start, 500);
 var last_timestamp = 0;
 
+// Indexes used to select the animation class in function of banor pick, the 3rd one is used to determine which animation was the previous one in order to have the right index for locking
+const pick_anim_ind = 1;
+const ban_anim_ind = 3;
+var last_anim_ind = 0;
+
+// Function is called every 0.5 seconds to update the interface
 async function start(){
+  // We use the current timestamp to make sure the page doesn't cache the json file
   var now = "?".concat(Date.now())
   var jsonFile = await fetch("links.json".concat(now)).then(res => res.json());
+
+  // Getting the value of the timer (To be updated client-side)
   timer.textContent = jsonFile["timer"];
   
+  // Getting the new timestamp from json file, if it isn't different from before, no update has been done, thus we leave the function
   var new_timestamp = jsonFile.timestamp
-
   if (last_timestamp == new_timestamp){
     return 0;
   }
   
   last_timestamp = new_timestamp;
-  for (var i = 0; i < 10; ++i){
+  // Updating all the sources of the images
+  for (var i = 0; i < PickBans.length; ++i){
     var classes = PickBans[i].classList;
+    // The classes are used to determine red/blue, pick/ban and position
     PickBans[i].src=jsonFile.links[classes[0]][classes[1]][classes[2]];
     if (i%2 == 0){
+      // For every second updated element we update 2 Summoner spells
       var sumClasses = SummonerSpells[i].classList;
       SummonerSpells[i].src=jsonFile.links[sumClasses[0]][sumClasses[1]][sumClasses[2]][0];
       SummonerSpells[i+1].src=jsonFile.links[sumClasses[0]][sumClasses[1]][sumClasses[2]][1];
     }
   }
+
+  // After every confirmation of pick/ban we consider it locked, in order to flush away its animation
+  locker = document.getElementById(jsonFile.locking[1]);
+  if (locker != null){
+    // By removing the animation's class
+    locker.classList.remove(locker.classList[last_anim_ind]); // We use last_anim_ind to determine the right index in function of pick/ban
+    locker.classList.add(LockAnimations[jsonFile.locking[0]]); // And replacing it by the "locking" animation which plays only once
+  }
+
+  // If someone is picking/banning we play an animation
   if (jsonFile.phase == "picking"){
-      picker = document.getElementById(jsonFile.picking[1]);
-      console.log(picker.previousElementSibling)
+      picker = document.getElementById(jsonFile.picking[1]); // We use the element's id to determine who's picking/banning
       if (picker != null){
-        picker.classList.remove(picker.classList[1]);
+        picker.classList.remove(picker.classList[pick_anim_ind]);
         picker.classList.add(PickAnimations[jsonFile.picking[0]]);
+        last_anim_ind = pick_anim_ind;
       }
     }
   else if (jsonFile.phase = "banning"){
     banner = document.getElementById(jsonFile.banning[1]);
     if (banner != null){
-      banner.classList.remove(banner.classList[3]);
+      banner.classList.remove(banner.classList[ban_anim_ind]);
       banner.classList.add(BanAnimations[jsonFile.banning[0]]);
+      last_anim_ind = ban_anim_ind;
     }
-  }
-  locker = document.getElementById(jsonFile.locking[1]);
-  if (locker != null){
-    locker.classList.remove(locker.classList[1]);
-    locker.classList.add(LockAnimations[jsonFile.locking[0]]);
   }
 }
 
